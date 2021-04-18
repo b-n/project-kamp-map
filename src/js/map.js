@@ -33,6 +33,10 @@ export default class LeafletMap {
     this.images.map(image => image.addTo(this.map))
     this.polygons.map(polygon => polygon.addTo(this.map))
     this.markers.map(marker => marker.addTo(this.map))
+
+    setTimeout(() => {
+      this.map.invalidateSize()
+    }, 0)
   }
 
   getMarker({ center, src, size }) {
