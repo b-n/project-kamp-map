@@ -1,4 +1,5 @@
 import L from 'leaflet'
+import './lib/lwsu/leaflet-polygon-fillPattern/leaflet-polygon.fillPattern'
 
 import data from '../data/data.json'
 
