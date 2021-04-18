@@ -639,4 +639,4 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	border-right-color: #fff;
 	}
 
-html,body,ul,ol{margin:0;padding:0}html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}html{font-family:"Open Sans",Arial,sans-serif;color:#55585a;line-height:1.4}body{font-size:1rem}h1,h2,h3{font-family:"Varela Round",Arial,sans-serif;margin-top:0;margin-bottom:.75rem}h1{font-size:1.5rem}h2{font-size:1.2rem}h3{font-size:.9rem}p,a{font-size:.9rem;font-weight:normal;font-family:"Open Sans",Arial,sans-serif;color:#55585a;line-height:1.4;margin-top:0}p{margin-bottom:1rem}html,body,.map{height:100%}
+html,body,ul,ol{margin:0;padding:0}html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}html{font-family:"Open Sans",Arial,sans-serif;color:#55585a;line-height:1.4}body{font-size:1rem}h1,h2,h3{font-family:"Varela Round",Arial,sans-serif;margin-top:0;margin-bottom:.75rem}h1{font-size:1.5rem}h2{font-size:1.2rem}h3{font-size:.9rem}p,a{font-size:.9rem;font-weight:normal;font-family:"Open Sans",Arial,sans-serif;color:#55585a;line-height:1.4;margin-top:0}p{margin-bottom:1rem}html,body,.map{height:100%}.map.leaflet-container{background-color:#8fb687}
