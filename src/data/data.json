@@ -1,20 +1,12 @@
 {
   "markers": [
     {
-      "center": [
-        40.44323040306531,
-        -8.089232053707086
-      ],
-      "src": "images/house-p-500.png",
-      "size": [120, 120]
-    },
-    {
-      "center": [
-        40.44400872063565,
-        -8.08943173881124
-      ],
-      "src": "images/kamp-p-500.png",
-      "size": [120, 120]
+      "center": [40.44216900841199,-8.089251109420353],
+      "iconOptions": {
+        "iconUrl": "images/webclip.png",
+        "iconSize": [80, 80]
+      },
+      "options": {}
     }
   ],
   "images": [

@@ -23,7 +23,7 @@ export default class LeafletMap {
     })
 
     if (process.env.NODE_ENV === 'development') {
-      this.map.on('click', event => console.log(event.latlng.toString()))
+      this.map.on('click', event => this.addDebugMarker(event))
       const osmUrl = `https://api.mapbox.com/v4/mapbox.satellite/{z}/{x}/{y}.webp?sku=1019LN9R8ZICO&access_token=${process.env.MAPBOX_API_KEY}`
       const osmAttrib='<a href="https://www.mapbox.com/about/maps/">© Mapbox</a> <a href="http://www.openstreetmap.org/about/">© OpenStreetMap</a> <a href="https://www.maxar.com/">© Maxar</a>'
       const osm = new L.TileLayer(osmUrl, { minZoom: 3, maxZoom: 18, attribution: osmAttrib })
@@ -40,15 +40,31 @@ export default class LeafletMap {
     }, 0)
   }
 
-  getMarker({ center, src, size }) {
-    const [width, height] = size
+  addDebugMarker(event) {
+    if (!this.debugMarkers) { this.debugMarkers = [] }
+    const marker = this.getMarker({
+      center: event.latlng,
+      iconOptions: { iconUrl: "images/x.png", iconSize: [32, 32] },
+      options: { draggable: true, title: '' + this.debugMarkers.length }
+    })
+    marker.on('dragend', () => this.logDebugMarkerPositions())
+    marker.addTo(this.map)
+    this.debugMarkers.push(marker)
+    this.logDebugMarkerPositions()
+  }
+
+  logDebugMarkerPositions() {
+    const markerPositions = this.debugMarkers.map(marker => { const loc = marker.getLatLng(); return [loc.lat, loc.lng] })
+
+    console.log(JSON.stringify(markerPositions))
+  }
+
+  getMarker({ center, iconOptions, options }) {
     return L.marker(
       center,
       {
-        icon: L.icon({
-          iconUrl: src,
-          iconSize: [width, height]
-        })
+        ...options,
+        icon: L.icon(iconOptions)
       }
     )
   }
