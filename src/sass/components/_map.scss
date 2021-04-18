@@ -2,4 +2,6 @@ html, body, .map {
   height: 100%;
 }
 
-.map {}
+.map.leaflet-container {
+  background-color: #8FB687;
+}
