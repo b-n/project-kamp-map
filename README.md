@@ -19,6 +19,12 @@ yarn install
 yarn run start
 ```
 
+If you want to see maps (and not errors) whilst developing, then you should add the following in a .env:
+
+```shell
+MAPBOX_API_KEY=<your public mapbox api key
+```
+
 ## Building
 
 Production builds are built on deployed when commited to main. If you want to inspect a build before it gets there you can:
