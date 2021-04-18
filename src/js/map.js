@@ -32,6 +32,7 @@ export default class LeafletMap {
 
     this.images.map(image => image.addTo(this.map))
     this.polygons.map(polygon => polygon.addTo(this.map))
+    this.polylines.map(polylines => polylines.addTo(this.map))
     this.markers.map(marker => marker.addTo(this.map))
 
     setTimeout(() => {
