@@ -79,7 +79,7 @@ Links:
 ```json
 {
   "latlngs": [[lat, lng]],
-  "options": "<Leaflet.Polygon options>"
+  "options": "<Leaflet.Polygon options>",
   "popupContent": "Some html goes here"
 }
 ```
