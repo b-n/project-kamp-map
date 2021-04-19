@@ -60,17 +60,19 @@ export default class LeafletMap {
     console.log(JSON.stringify(markerPositions))
   }
 
-  getMarker({ center, iconOptions, options }) {
-    return L.marker(
+  getMarker({ center, iconOptions, options, popupContent }) {
+    const marker = L.marker(
       center,
       {
         ...options,
         icon: L.icon(iconOptions)
       }
     )
+    if (popupContent) { marker.bindPopup(popupContent) }
+    return marker
   }
 
-  getImage({ src, topLeft, bottomRight, options }) {
+  getImage({ src, topLeft, bottomRight, options, popupContent }) {
     return L.imageOverlay(
       src,
       [topLeft, bottomRight],
@@ -78,11 +80,15 @@ export default class LeafletMap {
     )
   }
 
-  getPolygon({ latlngs, options }) {
-    return L.polygon(latlngs, options)
+  getPolygon({ latlngs, options, popupContent }) {
+    const polygon = L.polygon(latlngs, options)
+    if (popupContent) { polygon.bindPopup(popupContent) }
+    return polygon
   }
 
-  getPolyline({ latlngs, options }) {
-    return L.polyline(latlngs, options)
+  getPolyline({ latlngs, options, popupContent }) {
+    const polyline = L.polyline(latlngs, options)
+    if (popupContent) { polyline.bindPopup(popupContent) }
+    return polyline
   }
 }

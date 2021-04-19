@@ -6,7 +6,8 @@
         "iconUrl": "images/webclip.png",
         "iconSize": [80, 80]
       },
-      "options": {}
+      "options": {},
+      "popupContent": "I'm some random comment"
     }
   ],
   "images": [
@@ -16,7 +17,8 @@
       "bottomRight": [40.444132, -8.088818],
       "options": {
         "zIndex": "9001"
-      }
+      },
+      "popupContent": "Base kamp"
     }
   ],
   "polygons": [
@@ -57,7 +59,8 @@
         "fillColor": "transparent", 
         "fill": "url(images/forrest_tiled.png)",
         "stroke": false
-      }
+      },
+      "popupContent": "Forest of the wild"
     },
     {
       "latlngs": [
@@ -84,7 +87,8 @@
         "fillColor": "transparent",
         "fill": "url(images/rock.png)",
         "stroke": false
-      }
+      },
+      "popupContent": "Rock of <strong>Great</strong> big"
     }
   ],
   "polylines": [
@@ -146,7 +150,8 @@
       "options": {
         "color": "#D4CFB0",
         "weight": "7"
-      }
+      },
+      "popupContent": "Mainish road"
     },
     {
       "latlngs": [
@@ -158,7 +163,8 @@
       "options": {
         "color": "#D4CFB0",
         "weight": "7"
-      }
+      },
+      "popupContent": "More Mainish road"
     }
   ]
 }
